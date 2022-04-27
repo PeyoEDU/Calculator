@@ -114,10 +114,10 @@ def area_triangle():
   time.sleep(2)
 def area_parallelogram():
   print()
-  b = int(input("Enter the base of the triangle: "))
-  h = int(input("Enter the height of the rectangle: "))
+  b = int(input("Enter the base of the parallelogram: "))
+  h = int(input("Enter the height of the parallelogram: "))
   bh = b * h
-  print(bh)
+  print(f"The area of the parallelogram is {bh}")
   time.sleep(2)
 def area_selector():
   #fix this up later`
@@ -151,5 +151,4 @@ def area_menu():
   print("[5] Quit to Main Menu")
   print()
   area_selector()
-
 
