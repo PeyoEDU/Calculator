@@ -2,28 +2,35 @@ import os
 import time
 import pyfiglet
 def selector(option):
-  while option != 0:
-    if option == 1:
-      addition()
-    elif option == 2:
-      subtraction()
-    elif option == 3:
-      multiplication()
-    elif option == 4:
-      division()
-    elif option == 69:
-      print('Nice...')
-      time.sleep(1)
-    elif option == 5:
-      credits()
-    elif option == 6:
-      area_menu()
-    else:
+  try:
+    while option != 0:
+      if option == 1:
+        addition()
+      elif option == 2:
+        subtraction()
+      elif option == 3:
+        multiplication()
+      elif option == 4:
+        division()
+      elif option == 69:
+        print('Nice...')
+        time.sleep(1)
+      elif option == 5:
+        credits()
+      elif option == 6:
+        area_menu()
+      elif option == 7 or option == 8 or option == 9 or option == 10:
+        print("Coming soon! ;)")
+        print()
+        time.sleep(1)
+      else:
         print("Invalid option.")
         time.sleep(1)
-    print()
-    menu()
-    option = int(input("Enter your option: "))
+      print()
+      menu()
+      option = int(input("Enter your option: "))
+  except ValueError:
+    print("Hoi")
 def banner(x):
   banner = banner = pyfiglet.figlet_format(x)
   print(banner)
@@ -89,17 +96,29 @@ def area_square():
   print(f"The area of the square is {result}")
   time.sleep(1)
 def area_rectangle():
+  print()
   l = int(input("Enter the length of the rectangle. "))
   print()
   w = int(input("Enter the width of the rectangle."))
   result = l * w
   print()
   print(f"The area of the rectangle is {result}")
+  time.sleep(1)
 def area_triangle():
-  b = int(input("Enter the base of the triangle."))
-  h = int(input("Enter the height of the rectangle."))
+  print()
+  b = int(input("Enter the base of the triangle: "))
+  h = int(input("Enter the height of the rectangle: "))
+  bh = b * h
+  result = 0.5 * bh
+  print(f"The area of the triangle is {result}")
+  time.sleep(2)
 def area_parallelogram():
-  pass
+  print()
+  b = int(input("Enter the base of the triangle: "))
+  h = int(input("Enter the height of the rectangle: "))
+  bh = b * h
+  print(bh)
+  time.sleep(2)
 def area_selector():
   #fix this up later`
   figure = int(input("Enter your option: "))
